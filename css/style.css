@@ -1,0 +1,260 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8f0;
+    color: #333;
+    line-height: 1.6;
+    /* Adicione padding-top para evitar que o conteúdo fique escondido atrás do menu fixo */
+    padding-top: 90px; /* Ajuste este valor de acordo com a altura real do seu header */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* Adicione estas linhas para fixar o menu: */
+    position: fixed; /* Torna o elemento fixo em relação à janela de visualização */
+    width: 100%;     /* Garante que ocupe toda a largura */
+    top: 0;          /* Fixa no topo */
+    left: 0;         /* Fixa na esquerda */
+    z-index: 1000;   /* Garante que o menu fique acima de outros elementos */
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    /* Adicione estas propriedades para usar Flexbox e alinhar os itens */
+    display: flex;
+    justify-content: space-between; /* Espalha os itens: h1 à esquerda, nav à direita */
+    align-items: center; /* Centraliza verticalmente h1 e nav */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: left;
+    padding-left: 80px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a5d6a7;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: #2e7d32;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.image-section {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Recycling Bins Section */
+.recycling-bins {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.bin {
+    flex: 1 1 calc(20% - 20px); /* Adjusts for 5 bins in a row, with spacing */
+    min-width: 150px;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.bin:hover {
+    transform: translateY(-5px);
+}
+
+.bin h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.bin p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #eee;
+}
+
+.bin img {
+    max-width: 80px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Bin Colors */
+.bin.blue { 
+    background-color: #0377d6;} /* Paper */
+.bin.red { background-color: #b90c00; }   /* Plastic */
+.bin.green { background-color: #28922c; } /* Glass */
+.bin.yellow { background-color: #FFC107; }/* Metal */
+.bin.brown { background-color: #643523; } /* Organic */
+
+
+/* Games and Activities Section */
+.game-activity {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.game-activity h3 {
+    color: #388e3c;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.game-activity p {
+    margin-bottom: 10px;
+}
+
+.game-activity img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dicas Section */
+#dicas ul {
+    list-style: disc;
+    padding-left: 25px;
+}
+
+#dicas li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .recycling-bins {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bin {
+        flex: 1 1 90%;
+        max-width: 300px;
+    }
+
+    .game-activity {
+        padding: 15px;
+    }
+}
