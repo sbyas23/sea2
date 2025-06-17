@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #104908, #7c9d39, #aab952 );;
     color: white;
     padding: 1rem 20px;
     text-align: center;
@@ -29,8 +29,7 @@ header {
     justify-content: space-between; /* Espalha os itens: h1 à esquerda, nav à direita */
     align-items: center; /* Centraliza verticalmente h1 e nav */
     box-sizing: border-box; /* Garante que o padding não aumente a largura total */
-    padding-bottom: 50px;
-    padding-top: 50px;
+    height: 190px;
 }
 
 header h1 {
@@ -69,11 +68,12 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 20px auto;
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
+
 }
 
 section {
@@ -202,7 +202,6 @@ p {
 footer {
     background-color: #333;
     color: white;
-    text-align: center;
     padding: 15px 0;
     margin-top: 30px;
     font-size: 0.9rem;
